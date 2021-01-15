@@ -29,7 +29,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'jp.ac.uryukyu.ie.e205734.App'
+    mainClassName = 'jp.ac.uryukyu.ie.e205734.Main'
 }
 
 tasks.named('test') {
@@ -37,8 +37,11 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 sourceCompatibility = 10
+run{
+    standardInput=System.in
+}
 jar {
     manifest {
-        attributes  "Main-Class": "jp.ac.uryukyu.ie.tnal.App"
+        attributes  "Main-Class": "jp.ac.uryukyu.ie.e205734.Main"
     }
 }
