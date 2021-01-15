@@ -3,11 +3,8 @@ package jp.ac.uryukyu.ie.e205705_e205734;
 public class Slot_system extends Exception {
     int slotArray[] = new int[3];
     int count[] = new int[3];
+    Slot_pictures design = new Slot_pictures();
     int skill;
-
-    public int getskill() {
-        return this.skill;
-    }
 
     public int Slot() {
 
@@ -16,41 +13,43 @@ public class Slot_system extends Exception {
             count[i] = 0;
             skill = 0;
         }
-
-        System.out.println("     1か2か3を入力してください。     ");
+        System.out.println("                                     ");
+        System.out.println("    　　　　 技スロットを回します 　　　    ");
+        System.out.println("     　『1』か『2』を入力してください。     ");
         while (count[0] == 0 || count[1] == 0 ) {
 
             int num = new Exception().TryInt();
 
             System(num, 1, 0, 0);
             System(num, 2, 1, 1);
-            if (num == 1 || num == 2 ) {
+            if (num == 1 && count[1] == 0 || num == 2 && count[0] == 0) {
                 System.out.println("     残りの数字を押してください     ");
-            } else {
+            }else if(count[0] == 1 && count[1] == 1){
+                System.out.println("                                ");
+            }else {
                 System.out.println("     1~3の範囲で入力してください     ");
             }
         }
         if (slotArray[0] == slotArray[1] ) {
-            System.out.println("＞＞     会心の一撃！！     ＜＜");
+            design.all_pic(slotArray[0], slotArray[1]);
+            System.out.println("　　　　　＞＞＞   特殊攻撃発動！！  ＜＜＜　　　");
+            System.out.println("                                      　  ");
             int skill = slotArray[0];
-            Slot_pictures.all_pic(slotArray[0], slotArray[1]);
             return skill;
         } else {
-            System.out.println("     残念！！     ");
+            design.all_pic(slotArray[0], slotArray[1]);
+            System.out.println("         残念、通常攻撃だ！！    　  ");
+            System.out.println("                              　  ");
             int skill = 3;
-            Slot_pictures.all_pic(slotArray[0], slotArray[1]);
             return skill;
         }
-
-       
-
     }
 
     public void System(int num, int a, int b, int c) {
         if (num == a) {
             if (count[b] == 0) {
                 slotArray[c] = (int) (Math.random() * 3);
-                System.out.println(slotArray[c]);
+                System.out.println(design.pictures(slotArray[c]));
                 count[b] = 1;
 
             } else {

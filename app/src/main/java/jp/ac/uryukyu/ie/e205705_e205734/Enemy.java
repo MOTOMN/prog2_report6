@@ -44,7 +44,7 @@ public class Enemy extends Character{
                     break;
                 case 2:
                     System.out.println(player.getname()+"の怒り！");
-                    player.setattack(player.getattack()+5);
+                    player.setattack(player.getattack()+20);
                     System.out.println(player.getname()+"は攻撃力が上がった！攻撃力："+player.getattack());
                     break;
                 default:

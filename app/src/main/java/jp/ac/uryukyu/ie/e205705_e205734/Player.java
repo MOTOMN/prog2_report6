@@ -24,17 +24,17 @@ public class Player extends Character {
             System.out.println(super.getname()+"はレベルアップによりHPが全回復した！");
         }else{
             int lackExp = this.maxExp-this.exp;
-            System.out.println(super.getname()+"は現在Lv."+this.level+":"+this.exp+"経験値溜まっている！"+"あと"+lackExp+"経験値でレベルアップ！");
+            System.out.println(super.getname()+"は現在Lv."+this.level+" : "+this.exp+"経験値溜まっている！"+" あと"+lackExp+"経験値でレベルアップ！");
         }
         
     }
 
     public void statusup(){
         this.level += 1;
-        super.setattack(super.getattack()+20);
-        super.setmaxHp(super.getmaxHp()+20);
+        super.setattack(super.getattack()+10);
+        super.setmaxHp(super.getmaxHp()+30);
         System.out.println(super.getname()+"はLv."+this.level+"に上がった！");
-        System.out.println(super.getname()+"はレベルアップにより最大HP+20,攻撃力+20ステータスUPした！");
+        System.out.println(super.getname()+"はレベルアップにより最大HP+30,攻撃力+10ステータスUPした！");
     }
 
     @Override

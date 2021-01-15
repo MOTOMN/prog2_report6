@@ -11,11 +11,13 @@ public class Turn {
     }
     
     public void playbattle(Player player1, Enemy player2){
-        System.out.println("-------------------");
+        System.out.println("----------------------------");
         player1.status(player1,player2);
+        System.out.println("----------------------------");
         while(true){
-            System.out.println("-------------------");
+            System.out.println("----------------------------");
             System.out.println(this.turn+"ターン目戦闘開始！");
+            System.out.println("----------------------------");
             act(player1, player2);
             if(player1.getdead()==true && player2.getdead()==true){
                 System.out.println("引き分け！");
@@ -28,8 +30,8 @@ public class Turn {
                 System.out.println(player1.getname()+"の勝利！");
                 player1.chLevelUp(player2.getgiveExp());
                 this.turn =1;
-                System.out.println("もう一度戦いますか？");
-                System.out.println("「y」：はい　　「n」：いいえ");
+                System.out.println("もう一度戦いますか？(次のバトルへ行く場合は『いいえ』）)");
+                System.out.println("「1」：はい　　「2」：いいえ");
                 if(new Scansystem().inputy_n()){
                     reset(player2);
                     player1.status(player1,player2);
@@ -40,7 +42,6 @@ public class Turn {
             }else{
                 this.turn += 1;
                 System.out.println("次のターンへ進みます");
-                System.out.println("「y」：はい");
                 if(new Scansystem().input_y()){
                     continue;
                 }

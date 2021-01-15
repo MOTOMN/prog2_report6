@@ -7,11 +7,11 @@ public class Scansystem {
 
     public boolean inputy_n(){
         while(true){
-            System.out.println("「y」か「n」を入力してください");
+            System.out.println("「1」か「2」を入力してください");
             switch(scanner.nextLine()){
-                case "y":
+                case "1":
                     return true;
-                case "n":
+                case "2":
                     return false;
                 default:
                     continue;
@@ -21,9 +21,9 @@ public class Scansystem {
 
     public boolean input_y(){
         while(true){
-            System.out.println("「y」を入力してください");
+            System.out.println("「1」を入力してください");
             switch(scanner.nextLine()){
-                case "y":
+                case "1":
                     return true;
                 default:
                     continue;

@@ -10,7 +10,7 @@ public class Exception {
             int ans_i = test.nextInt();
             return ans_i;
         } catch (InputMismatchException e) {
-            System.out.println("数字を入力してください");
+            System.out.println("     数字を入力してください     ");
         }
         return 0;
     }
