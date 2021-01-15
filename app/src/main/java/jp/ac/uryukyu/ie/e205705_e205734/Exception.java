@@ -1,4 +1,4 @@
-package jp.ac.uryukyu.ie.e205734;
+package jp.ac.uryukyu.ie.e205705_e205734;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

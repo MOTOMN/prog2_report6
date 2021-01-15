@@ -29,7 +29,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'jp.ac.uryukyu.ie.e205734.Main'
+    mainClassName = 'jp.ac.uryukyu.ie.e205705_e205734.Main'
 }
 
 tasks.named('test') {
@@ -42,6 +42,6 @@ run{
 }
 jar {
     manifest {
-        attributes  "Main-Class": "jp.ac.uryukyu.ie.e205734.Main"
+        attributes  "Main-Class": "jp.ac.uryukyu.ie.e205705_e205734.Main"
     }
 }
